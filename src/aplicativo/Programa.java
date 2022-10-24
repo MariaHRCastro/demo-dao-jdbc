@@ -11,15 +11,20 @@ public class Programa {
 
 	public static void main(String[] args) {
 
-		Departamento dpt = new Departamento(1, "Books");
+		/*Departamento dpt = new Departamento(1, "Books");
 		
 		Vendedor vendedor = new Vendedor(21, "Maria", "mariahribeiro@gmail.com", new Date(), 3000.00, dpt);
 		
 		System.out.println(dpt);
 		System.out.println(vendedor);
 		
-		//A IMPLEMENTAÇÃO FICA PROTEGIDA, O PROGRAMA SÓ LIDA COM  A INTERFACE E COM AS CLASSES AUXILIARES.
+		//A IMPLEMENTAÇÃO FICA PROTEGIDA, O PROGRAMA SÓ LIDA COM  A INTERFACE E COM AS CLASSES AUXILIARES.*/
+		
 		VendedorDao vendedorDao = DaoFabrica.criarVendedorDao();
+		
+		Vendedor vendedor = vendedorDao.acharPorId(3);
+		
+		System.out.println(vendedor);
 		
 	}
 
