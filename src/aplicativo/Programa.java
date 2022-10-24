@@ -1,10 +1,7 @@
 package aplicativo;
 
-import java.util.Date;
-
 import model.dao.DaoFabrica;
 import model.dao.VendedorDao;
-import model.entidades.Departamento;
 import model.entidades.Vendedor;
 
 public class Programa {
@@ -21,6 +18,8 @@ public class Programa {
 		//A IMPLEMENTAÇÃO FICA PROTEGIDA, O PROGRAMA SÓ LIDA COM  A INTERFACE E COM AS CLASSES AUXILIARES.*/
 		
 		VendedorDao vendedorDao = DaoFabrica.criarVendedorDao();
+		
+		System.out.println("=== TESTE NÚMERO 1: Achar Vendedor pelo ID ===");
 		
 		Vendedor vendedor = vendedorDao.acharPorId(3);
 		
