@@ -38,6 +38,14 @@ public class Programa {
 			System.out.println(v);
 		}
 		
+		System.out.println();
+		System.out.println("===TESTE ACHAR TODOS ===");
+		lista = vendedorDao.retornarTodos();
+		
+		for (Vendedor v: lista) {
+			System.out.println(v);
+		}
+		
 	}
 
 }
