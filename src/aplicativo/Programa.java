@@ -47,11 +47,23 @@ public class Programa {
 			System.out.println(v);
 		}
 		
-		System.out.println();
+		/*System.out.println();
 		System.out.println("===== TESTE DE INSERÇÃO ====");
 		Vendedor novoVendedor = new Vendedor(null, "Greg", "greg@gmail.com", new Date(), 4000.00, departamento);
 		vendedorDao.inserir(novoVendedor);
-		System.out.println("Vendedor Inserido! Id = "+novoVendedor.getId());
+		System.out.println("Vendedor Inserido! Id = "+novoVendedor.getId());*/
+		
+		System.out.println();
+		System.out.println("===TESTE 5 - UPDATE ===");
+		vendedor = vendedorDao.acharPorId(1);
+		vendedor.setNome("Martha");
+		
+		vendedorDao.atualizar(vendedor);
+		System.out.println();
+		System.out.println("ATUALIZAÇÃO COMPLETA");
+		System.out.println(vendedor);
+		
+		
 		
 	}
 
