@@ -1,7 +1,10 @@
 package aplicativo;
 
+import java.util.List;
+
 import model.dao.DaoFabrica;
 import model.dao.VendedorDao;
+import model.entidades.Departamento;
 import model.entidades.Vendedor;
 
 public class Programa {
@@ -24,6 +27,16 @@ public class Programa {
 		Vendedor vendedor = vendedorDao.acharPorId(3);
 		
 		System.out.println(vendedor);
+		
+		System.out.println();
+		
+		System.out.println("===TESTE ACHAR POR DEPARTAMENTO ===");
+		Departamento departamento = new Departamento(2,null);
+		List<Vendedor> lista = vendedorDao.acharPorDepartamento(departamento);
+		
+		for (Vendedor v: lista) {
+			System.out.println(v);
+		}
 		
 	}
 
