@@ -12,7 +12,7 @@ public interface VendedorDao {
 		
 		void atualizar(Vendedor vendedor);
 		
-		void deletarPorId (Vendedor vendedor);
+		void deletarPorId (Integer id);
 		
 		//RETORNAR UMA BUSCA POR ID
 		Vendedor acharPorId(Integer id);
@@ -20,5 +20,6 @@ public interface VendedorDao {
 		List <Vendedor> retornarTodos();
 		
 		List<Vendedor> acharPorDepartamento(Departamento departamento);
+
 	
 }

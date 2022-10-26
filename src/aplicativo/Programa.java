@@ -1,7 +1,7 @@
 package aplicativo;
 
-import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 import model.dao.DaoFabrica;
 import model.dao.VendedorDao;
@@ -11,6 +11,8 @@ import model.entidades.Vendedor;
 public class Programa {
 
 	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
 
 		/*Departamento dpt = new Departamento(1, "Books");
 		
@@ -47,11 +49,12 @@ public class Programa {
 			System.out.println(v);
 		}
 		
-		/*System.out.println();
+		/*
+		System.out.println();
 		System.out.println("===== TESTE DE INSERÇÃO ====");
 		Vendedor novoVendedor = new Vendedor(null, "Greg", "greg@gmail.com", new Date(), 4000.00, departamento);
 		vendedorDao.inserir(novoVendedor);
-		System.out.println("Vendedor Inserido! Id = "+novoVendedor.getId());*/
+		System.out.println("Vendedor Inserido! Id = "+novoVendedor.getId());
 		
 		System.out.println();
 		System.out.println("===TESTE 5 - UPDATE ===");
@@ -62,7 +65,16 @@ public class Programa {
 		System.out.println();
 		System.out.println("ATUALIZAÇÃO COMPLETA");
 		System.out.println(vendedor);
+		*/
 		
+		System.out.println();
+		System.out.println("====TESTE 6 : DELEÇÃO====");
+		System.out.print("Entre com um valor de ID: ");
+		int x = sc.nextInt();
+		vendedorDao.deletarPorId(x);
+		System.out.println("Deleção completa!");
+		
+		sc.close();
 		
 		
 	}
