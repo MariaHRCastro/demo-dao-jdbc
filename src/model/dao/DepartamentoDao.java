@@ -11,7 +11,7 @@ public interface DepartamentoDao {
 	
 	void atualizar(Departamento departamento);
 	
-	void deletarPorId (Departamento departamento);
+	void deletarPorId (Integer id);
 	
 	//RETORNAR UMA BUSCA POR ID
 	Departamento acharPorId(Integer id);
